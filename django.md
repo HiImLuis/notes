@@ -8,12 +8,12 @@ Django is a python based web framework to build client-server side applications
 
 ### Installing tools
 
-### Python
+#### Python
 
 - Install python
 > sudo apt install python3
 
-### Virtualenv
+#### Virtualenv
 - Install virtualenv (optional)
 > sudo apt install virtualenv
 
@@ -26,40 +26,42 @@ Django is a python based web framework to build client-server side applications
 - Activate virtual envirnoment
 > virtualenv\_name/bin/activate
 
-### Django
+#### Django
 - Install Django
 > pip install django
 
-#### Extra packages
+##### Extra packages
 > pip install djangorestframework
 > pip install pillow
 > pip install reportlab
 > pip install django-extensions
 
-### Database (MariaDB)
+#### Database (MariaDB)
 - Install database server
 > sudo apt install mariadb-server
 
-#### Configuration
-> sudo mysql\_secure\_installation
-**Create a user for me and for development**
-> > CREATE USER 'username' IDENTIFIED BY 'password\_here';
-> > GRANT ALL PRIVILEGES ON \*.\* TO 'username';
+##### Configuration
+> sudo mysql\_secure\_installation\
+**Create a user for for development**
+> > CREATE USER 'username' IDENTIFIED BY 'password\_here';\
+> > GRANT ALL PRIVILEGES ON \*.\* TO 'username';\
 or just\
-> > GRANT CREATE, UPDATE, DELETE ON database\_name.table\_name TO 'username';
+> > GRANT CREATE, UPDATE, DELETE ON database\_name.table\_name TO 'username';\
 granted permissions will be defined by you\
 
-### Conecting Django with MariaDB
+#### Conecting Django with MariaDB
 
-#### Packages needed
+##### Packages needed
 - python3-dev
-> pip install python3-dev
+> sudo apt install python3-dev
 
-- libmariadbclient.dev
+- libmariadbclient-dev
+> sudo apt install libmariadbclient-dev
 
+- mysqlclient (in your virtualenv)
+> pip install mysqlclient
 
-
-### Start a Django project
+#### Start a Django project
 
 **python manage.py 
 
