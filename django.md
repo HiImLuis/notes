@@ -6,13 +6,14 @@
 ### What's Django?
 Django is a python based web framework to build client-server side applications
 
-### Installation
+### Installing tools
 
-#### Ubuntu/Debian based distributions
+### Python
 
 - Install python
 > sudo apt install python3
 
+### Virtualenv
 - Install virtualenv (optional)
 > sudo apt install virtualenv
 
@@ -25,20 +26,36 @@ Django is a python based web framework to build client-server side applications
 - Activate virtual envirnoment
 > virtualenv\_name/bin/activate
 
+### Django
 - Install Django
 > pip install django
 
-- Install Django Rest Framework (optional)
+#### Extra packages
 > pip install djangorestframework
-
-- Some aditional resources
 > pip install pillow
 > pip install reportlab
 > pip install django-extensions
 
-
+### Database (MariaDB)
 - Install database server
 > sudo apt install mariadb-server
+
+#### Configuration
+> sudo mysql\_secure\_installation
+**Create a user for me and for development**
+> > CREATE USER 'username' IDENTIFIED BY 'password\_here';
+> > GRANT ALL PRIVILEGES ON \*.\* TO 'username';
+or just\
+> > GRANT CREATE, UPDATE, DELETE ON database\_name.table\_name TO 'username';
+granted permissions will be defined by you\
+
+### Conecting Django with MariaDB
+
+#### Packages needed
+- python3-dev
+> pip install python3-dev
+
+- libmariadbclient.dev
 
 
 
