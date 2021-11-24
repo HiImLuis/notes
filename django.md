@@ -46,9 +46,13 @@ Django is a python based web framework to build client-server side applications
 Create a user for for development
 
 > CREATE USER 'username' IDENTIFIED BY 'password\_here';\
+
 > GRANT ALL PRIVILEGES ON \*.\* TO 'username';\
+
 or just\
+
 > GRANT CREATE, UPDATE, DELETE ON database\_name.table\_name TO 'username';\
+
 granted permissions will be defined by you\
 
 #### Conecting Django with MariaDB
