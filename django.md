@@ -41,19 +41,19 @@ Django is a python based web framework to build client-server side applications
 > sudo apt install mariadb-server
 
 ##### Configuration
-> sudo mysql\_secure\_installation\
+> sudo mysql\_secure\_installation
 
 Create a user for for development
 
-> CREATE USER 'username' IDENTIFIED BY 'password\_here';\
+> CREATE USER 'username' IDENTIFIED BY 'password\_here';
 
-> GRANT ALL PRIVILEGES ON \*.\* TO 'username';\
+> GRANT ALL PRIVILEGES ON \*.\* TO 'username';
 
-or just\
+or just
 
-> GRANT CREATE, UPDATE, DELETE ON database\_name.table\_name TO 'username';\
+> GRANT CREATE, UPDATE, DELETE ON database\_name.table\_name TO 'username';
 
-granted permissions will be defined by you\
+granted permissions will be defined by you
 
 #### Conecting Django with MariaDB
 
@@ -67,8 +67,37 @@ granted permissions will be defined by you\
 - mysqlclient (in your virtualenv)
 > pip install mysqlclient
 
-#### Start a Django project
+### Working with Django
 
-**python manage.py 
+> django-admin startproject
 
+Creates a Django project
+
+> django-admin startapp app\_name
+
+OR
+
+> python manage.py startapp app\_name
+ 
+Inside the project folder, at **./** creates a django application
+
+> python manage.py makemigrations
+
+Create migrations for all installed applications
+
+> python manage.py makemigrations app\_name
+
+Make migratios for the app\_name
+
+> python manage.py sqlmigration
+
+Show the sql migration equivalent
+
+> python manage.py shell
+
+Starts an interactive shell
+
+> python manage.py shell\_plus
+
+Starts a ready for use shell, make al imports for you and give the autocomplete functionality while you are making queries (needs 'django\_extensions' installed in your apps)
 
