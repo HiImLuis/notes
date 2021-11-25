@@ -70,34 +70,25 @@ granted permissions will be defined by you
 ### Working with Django
 
 > django-admin startproject
-
 Creates a Django project
 
-> django-admin startapp app\_name
-
+django-admin startapp app\_name
 OR
-
-> python manage.py startapp app\_name
- 
+> python manage.py startapp app\_name 
 Inside the project folder, at **./** creates a django application
 
 > python manage.py makemigrations
-
 Create migrations for all installed applications
 
 > python manage.py makemigrations app\_name
-
 Make migratios for the app\_name
 
-> python manage.py sqlmigration
-
+> python manage.py sqlmigrate app\_name 0001
 Show the sql migration equivalent
 
 > python manage.py shell
-
 Starts an interactive shell
 
 > python manage.py shell\_plus
-
-Starts a ready for use shell, make al imports for you and give the autocomplete functionality while you are making queries (needs 'django\_extensions' installed in your apps)
+Starts a ready to use shell, make al needed imports and gives to you the autocomplete functionality when you are making queries (needs 'django\_extensions' installed in your apps)
 
